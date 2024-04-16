@@ -1,7 +1,17 @@
 % Figures and stats for Reeves & Otero-Millan 2023
 
+% Load and initialize
+SubjList = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20"];
+projectFolder =  '/Users/stephaniereeves/UC Berkeley/OMlab - OM-lab-share/Projects/MicrosaccadesImageTilt/Manuscript/Reeves_Otero-Millan_JNS_2023'; %edit as needed
+
+load(fullfile(projectFolder, 'saccade.mat'))
+load(fullfile(projectFolder, 'trialTable.mat'))
+load(fullfile(projectFolder, 'samplesDataTable.mat'))
+load(fullfile(projectFolder, 'tab.mat'))
+load(fullfile(projectFolder, 'bootstrappedData.mat'))
+
+
 %% MANUSCRIPT FIGURE -- Main sequence for paper 
-load(fullfile(projectFolder, 'FreeViewingFixation__0137__A', 'samplesDataTable.mat'))
 
 st = find(samplesDataTable.TrialNumber == 42,1,'first'); % trial 83 for 0186 is good 
 en = find(samplesDataTable.TrialNumber == 42,1,'last');
